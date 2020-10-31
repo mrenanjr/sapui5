@@ -19,7 +19,7 @@ sap.ui.define([
 			$.ajax({
                 type : "GET",
                 contentType : "application/json",
-                url : "http://localhost:5000/api/book",
+                url : "http://localhost:8080/api/book",
                 dataType : "json",
                 async: true, 
                 success : this.resSuccess.bind(this),
@@ -37,7 +37,7 @@ sap.ui.define([
 			$.ajax({
                 type : "GET",
                 contentType : "application/json",
-                 url : "http://localhost:5000/api/author",
+                 url : "http://localhost:8080/api/author",
                 dataType : "json",
                 async: true, 
                 success : function(result) {
@@ -83,7 +83,7 @@ sap.ui.define([
 			
 			$.ajax({
 				type : "DELETE", 
-                url : `http://localhost:5000/api/book/${oCurrentBook.id}`,
+                url : `http://localhost:8080/api/book/${oCurrentBook.id}`,
                 async: true, 
                 success : function() {
 					oViewData.booksData = oViewData.booksData.filter(f => f.id !== oCurrentBook.id);
@@ -112,7 +112,7 @@ sap.ui.define([
 				type : "POST",
 				data: JSON.stringify(newbook), 
                 contentType : "application/json",
-                url : "http://localhost:5000/api/book",
+                url : "http://localhost:8080/api/book",
                 dataType : "json",
                 async: true, 
                 success : function(data) {
