@@ -1,0 +1,44 @@
+<core:FragmentDefinition
+   xmlns="sap.m"
+   xmlns:core="sap.ui.core"
+   xmlns:ui="sap.ui"
+   xmlns:f="sap.ui.layout.form">
+   <Dialog id="bookRegisterDialog">
+      <f:SimpleForm id="bookRegisterForm"
+            maxContainerCols="2"
+            editable="true"
+            layout="ResponsiveGridLayout"
+            title="Livro"
+            labelSpanL="2"
+            labelSpanM="2"
+            emptySpanL="0"
+            emptySpanM="0"
+            columnsL="1"
+            columnsM="1"
+            class="editableForm">
+            <f:content>
+                <Label text="Nome" />
+                <Input value="{/book/name}" placeholder="Nome"/>
+
+                <Label text="Ano" />
+                <DatePicker value="{/book/year}"
+                    id="year"
+                    name="year"
+                    maxDate="{2020}"
+                    class="sapUiTinyMargin"
+                    displayFormat="yyyy"
+                    valueFormat="yyyy"
+                    width="7rem" />
+                
+                <Label text="Author" />
+                <ComboBox id="idAuthor" selectedKey="{/book/authorId}" selectionChange="selectChanged" items="{ path: '/book/authors' }">
+                    <items>
+                        <core:Item key="{id}" text="{name}" />
+                    </items>
+                </ComboBox>
+                <Button text="Salvar" type="Accept" press="handleSaveNewBook"/>
+                <Button text="Cancelar" type="Reject" press="handleCloseRegisterBook"/>
+            </f:content>
+        </f:SimpleForm>
+   </Dialog>
+</core:FragmentDefinition>

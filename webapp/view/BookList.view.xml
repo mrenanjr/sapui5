@@ -1,0 +1,35 @@
+<mvc:View
+   controllerName="sap.ui.demo.walkthrough.controller.BookList"
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc">
+   <Table items="{/booksData}">
+      <columns>
+         <Column vAlign="Middle">
+            <Label text="Nome"/>
+         </Column>
+         <Column vAlign="Middle">
+            <Label text="Ano"/>
+         </Column>
+         <Column vAlign="Middle">
+            <Label text="Autor"/>
+         </Column>
+         <Column vAlign="Middle" hAlign="Right">
+            <Button icon="sap-icon://add" width="7rem" text="Livro" press=".handleAddBook" class="sapUiSmallMarginEnd"/>
+            <!-- <Button icon="sap-icon://add" width="7rem" text="Autor" press="handleAddAuthor"/> -->
+         </Column>
+      </columns>
+      <items>
+         <ColumnListItem>
+            <cells>
+               <Text text="{title}" />
+               <Text text="{year}" />
+               <Text text="{author/name}" />
+               <HBox justifyContent="End">
+                  <Button icon="sap-icon://edit" press="handleEditBook" />
+                  <Button icon="sap-icon://delete" press="handleRemoveBook" />
+               </HBox>
+            </cells>
+         </ColumnListItem>
+      </items>
+  </Table>
+</mvc:View>

@@ -1,0 +1,18 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ui5 serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@openui5/sap.m": "^1.82.2",
+    "@openui5/sap.ui.core": "^1.82.2",
+    "@openui5/themelib_sap_fiori_3": "^1.82.2"
+  }
+}
