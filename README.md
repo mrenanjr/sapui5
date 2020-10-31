@@ -1,6 +1,6 @@
 # sapui5
 
-Execute first the API application in https://github.com/mrenanjr/booksapi
+Execute first, API application is in https://github.com/mrenanjr/booksapi
 
 Install packages with "npm install".
 
